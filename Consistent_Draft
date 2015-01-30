@@ -6,7 +6,7 @@
 \author{ Jordan Lynn \\
 \and Ronald Rodriguez \\
 \and Lance Wells \\
-\and Kurt Blasdell \\
+\and
 }
 
 \begin{document}
@@ -20,48 +20,6 @@
 
 
 \begin{section}{Kurt Blasdell}
-\begin{subsection}{Open and Close the Inventory}
-\textbf{Actor:} The Player. \\
-\textbf{Goal:} Open the inventory, or close the inventory when finished. \\
-\textbf{Summary:} The player opens up the inventory in order to view or use items, or the player closes the inventory when they are finished. \\
-\textbf{Related Use-Cases:} Select an item from inventory; Move and item in the inventory \\
-\textbf{Steps:}
-\begin{enumerate}
-	\item The player presses the ‘i’ key
-	\item An inventory window will open, allowing the player to do things with items in the inventory
-	\item Pressing the ‘i’ key again will close the inventory screen
-\end{enumerate}
-\textbf{Alternative:} The player may also click the Inventory window icon to open/close.
-\end{subsection}
-	
-\begin{subsection}{Reload Weapon}
-\textbf{Actor:} The Player. \\
-\textbf{Goal:} The player’s weapon will be reloaded with ammo \\
-\textbf{Precondition:} The player has a weapon equipped that takes some form of ammo. \\
-\textbf{Precondition:} The player has the correct type of ammo for the weapon. \\
-\textbf{Summary:} The player will fill their weapon with ammo that they may have. \\
-\textbf{Steps:}
-\begin{enumerate}
-	\item Press the reload button
-	\item Subtract the correct amount of ammo from the players ammo resources
-	\item Add the amount from step two to the ammo in the player’s weapon
-\end{enumerate}
-\end{subsection}
-	
-\begin{subsection}{Look at Stats}
-\textbf{Actor:} The Player. \\
-\textbf{Goal:} Open the stats screen and close when the player if finished. \\
-\textbf{Summary:} The player opens up the stats screen in order to view stats, or alter them, or the player closes the stats screen when they are finished. \\
-\textbf{Related Use-Cases:} Increase Stats \\
-\textbf{Steps:}
-\begin{enumerate}
-	\item The player presses the ‘c’ key
-	\item The stats window is opened displaying current stats and stat points
-	\item Pressing the ‘c’ key again will close the stats window
-\end{enumerate}
-\textbf{Alternative:} The player may also click the stats window icon to open/close.
-\end{subsection}
-
 \end{section}
 
 
@@ -87,41 +45,6 @@
 
 
 \begin{section}{Michael Mueller}
-\begin{subsection}{Killing an Enemy}
-\textbf{Actors:} Player,Enemy
-\textbf{Goal:} Remove an eliminated enemy 
-\textbf{Preconditions:} 
-\begin{enumerate}
-       \Player is able to attack enemy
-       \Enemy has low enough armor to be fatally wounded this attack
-\end{enumerate}
-\textbf{Summary:} The player attacks an enemy, dealing a lethal blow.  
-\textbf{Related Use-Cases:} Attack, Leveling up, dialog
-\textbf{Steps:}
-\begin{enumerate}
-	\Player get close enough to attack the enemy
-	\Player attacks, slaying the enemy
-	\Enemy rewards the player
-\end{enumerate}
-\end{subsection}
-\begin{subsection}{Die}
-\textbf{Actors:} Player
-\textbf{Goal:} Lose the game 
-\textbf{Preconditions:} 
-\begin{enumerate}
-       \Player has just recieved a fatal amount of damage
-\end{enumerate}
-\textbf{Summary:} The player was dealt a lethal blow dislaying loss dialog and choice to restart.  
-\textbf{Related Use-Cases:} Attack, Dialog, close the game
-\textbf{Steps:}
-\begin{enumerate}
-	\Player takes a form of lethal damage
-	\The game displays a possible death animation 
-	\Game Over dialog 
-	\Pop up menu of choices appears
-	\Player choices what to do
-\end{enumerate}
-\end{subsection}
 \end{section}
 
 
@@ -135,20 +58,54 @@
 \textbf{Related Use-Cases:} Level Up \\
 \textbf{Steps:}
 \begin{enumerate}
-	\item Player is brought to stats menu page
+	\item Player opens menu via input.
+	\item Player navigates to 'Player Stats' section of menu.
 	\item Player has 5 points they can distribute among different stats like Def, Atk, Mag, etc.
-	\item Player navigates to stats using controller input and applies points accordingly
-	\item Player selects 'confirm' button in stats menu
-	\item "Confirm point allocation?" prompt displays along with yes and no options
-	\item If no is selected, prompt goes away and player can continue to allocate points as desired
+	\item Player navigates to stats using controller input and applies points accordingly.
+	\item Player selects 'confirm' button in stats menu.
+	\item "Confirm point allocation?" prompt displays along with yes and no options.
+	\item If no is selected, prompt goes away and player can continue to allocate points as desired.
 	\item If yes is selected, prompt closes and permanent stat boosts are initiated in accordance with point allocation.
-	\item Player can now close the menu and continue play.
 \end{enumerate}
 \textbf{Alternative:} The Player has not increased in level, and therefore has no points to increase stats with.
 \end{subsection}
-	
 
+\begin{subsection}{Level Up}
+\textbf{Actor:} The Player. \\
+\textbf{Goal:} Kill enough enemies and\or complete enough tasks to gain enough experience points to increase in level. \\
+\textbf{Precondition:} The player is killing enemies and completing quests, which grants them experience points. \\
+\textbf{Summary:} The player obtains enough experience points to increase in level, which grants them points to permanently increase their stats. \\
+\textbf{Related Use-Cases:} Increase Stats \\
+\textbf{Steps:}
+\begin{enumerate}
+	\item Player has not yet obtained the amount of experience points required to level up.
+	\item Player kills enemy or completes quest that puts them at the required amount of experience points to level up.
+	\item "Level Up!" prompt displays with accompanying victory sound. Gameplay is not interrupted. 
+	\item Player initiates 'Increase Stats' procedure (see above).
+\end{enumerate}
+\textbf{Alternative:} The player has not obtained enough experience points to increase in level. 
+\end{subsection}
 
+\begin{subsection}{Move Item in Inventory}
+\textbf{Actor:} The Player. \\
+\textbf{Goal:} Rearrange items within the inventory to allow for better organization and faster access \\
+\textbf{Precondition:} The player has item(s), and they would like to rearrange those items within the inventory \\
+\textbf{Summary:} The player chooses an item and then the spot they would like to move that item to within the inventory \\
+\textbf{Related Use-Cases:} Equip an Item, Use an Item \\
+\textbf{Steps:}
+\begin{enumerate}
+	\item Player opens menu via input.
+	\item Player navigates to 'Inventory' section of menu.
+	\item Player chooses 'Rearrange' option in 'Inventory' section.
+	\item Player chooses item to move via input.
+	\item Item chosen is highlighted.
+	\item Player navigates to spot in inventory they would like to move item to.
+	\item Player selects desired spot via input.
+	\item If spot selected is empty, highlighted item is moved to this spot and item's previous spot becomes empty.
+	\item If spot selected is not empty, highlighted item is moved to this spot and item that was previously occupying the selected spot is moved to original item's spot.
+\end{enumerate}
+\textbf{Alternative:} The Player has no items, and therefore nothing to rearrange.
+\end{subsection}
 \end{section}
 
 
