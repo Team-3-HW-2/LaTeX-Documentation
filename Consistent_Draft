@@ -45,6 +45,41 @@
 
 
 \begin{section}{Michael Mueller}
+\begin{subsection}{Killing an Enemy}
+\textbf{Actors:} Player,Enemy
+\textbf{Goal:} Remove an eliminated enemy 
+\textbf{Preconditions:} 
+\begin{enumerate}
+       \Player is able to attack enemy
+       \Enemy has low enough armor to be fatally wounded this attack
+\end{enumerate}
+\textbf{Summary:} The player attacks an enemy, dealing a lethal blow.  
+\textbf{Related Use-Cases:} Attack, Leveling up, dialog
+\textbf{Steps:}
+\begin{enumerate}
+	\Player get close enough to attack the enemy
+	\Player attacks, slaying the enemy
+	\Enemy rewards the player
+\end{enumerate}
+\end{subsection}
+\begin{subsection}{Die}
+\textbf{Actors:} Player
+\textbf{Goal:} Lose the game 
+\textbf{Preconditions:} 
+\begin{enumerate}
+       \Player has just recieved a fatal amount of damage
+\end{enumerate}
+\textbf{Summary:} The player was dealt a lethal blow dislaying loss dialog and choice to restart.  
+\textbf{Related Use-Cases:} Attack, Dialog, close the game
+\textbf{Steps:}
+\begin{enumerate}
+	\Player takes a form of lethal damage
+	\The game displays a possible death animation 
+	\Game Over dialog 
+	\Pop up menu of choices appears
+	\Player choices what to do
+\end{enumerate}
+\end{subsection}
 \end{section}
 
 
