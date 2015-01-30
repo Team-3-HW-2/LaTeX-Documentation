@@ -1,6 +1,7 @@
 \documentclass[12pt]{report}
 \usepackage{titling}
 
+%Shamelessly "adapted" from the other LaTeX documentation in U-C List repository
 \title{Homework 2, Team C}
 \author{ Jordan Lynn \\
 \and Ronald Rodriguez \\
