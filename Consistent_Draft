@@ -6,12 +6,13 @@
 \author{ Jordan Lynn \\
 \and Ronald Rodriguez \\
 \and Lance Wells \\
+\and Brett Menzies \\
 \and
 }
 
 \begin{document}
     \maketitle
-    
+
 \tableofcontents{}
 
 \chapter{PlantUML Diagrams}
@@ -40,6 +41,49 @@
 
 
 \begin{section}{Brett Menzies}
+
+\begin{subsection}{Equip an Item}
+\textbf{Actors:} Player \\
+\textbf{Preconditions:} Play has an equitable item, and the necessary skill to use the item \\
+\textbf{Summary:} The Player equips an item, changing their stats appropriately \\
+\textbf{Terminates:} When item is equipped or returned to inventory \\
+\textbf{Related use cases:} Select an Item from Inventory \\
+\textbf{Steps:}
+
+\begin{enumerate}
+	\item The user Selects an Item from Inventory
+	\item The user clicks on an equipment slot on their equipment display.
+	\item The system checks if the active item is equitable in that location and the user has the necessary skill.
+	\begin{itemize}
+		\item If valid: system equips the active item to character and recalculates player stats,
+			transporting previously equipped items to inventory if necessary.
+		\item If invalid: system prints message in dialog box explaining what conditions failed.
+	\end{itemize}
+	\item Alternative: The user right-clicks anywhere, deactivating and returning the item to its previous location.
+\end{enumerate}
+\end{subsection}
+
+\begin{subsection}{Use an Item}
+\textbf{Actors:} Player \\
+\textbf{Preconditions:} Player has usable item in inventory, valid target, and necessary skill \\
+\textbf{Summary:} The Player uses his/her skill to use an item on a target \\
+\textbf{Terminates:} After item is consumed or returned to inventory \\
+\textbf{Related use cases:} Select an Item from Inventory \\
+\textbf{Steps:}
+
+\begin{enumerate}
+	\item The user Selects an Item from Inventory
+	\item The user clicks on a target map tile.
+	\item The system checks if the target is valid and the user has the necessary skill to use the active item.
+	\begin{itemize}
+		\item If valid: system applies items effects to target; item is consumed.
+		\item If invalid:  system prints message in dialog box explaining what conditions failed.
+	\end{itemize}
+	\item Alternative: The user right-clicks anywhere, deactivating and returning the item to its previous location.
+\end{enumerate}
+
+\end{subsection}
+
 \end{section}
 
 
@@ -73,7 +117,7 @@
 \end{enumerate}
 \textbf{Alternative:} The Player does not have enough money and receives a message indicating such.
 \end{subsection}
-	
+
 \begin{subsection}{Enter a Dungeon}
 \textbf{Actor:} The Player. \\
 \textbf{Goal:} Enter a dungeon from some sort of menu option. \\
@@ -87,7 +131,7 @@
 	\item Be moved into a dungeon environment.
 \end{enumerate}
 \end{subsection}
-	
+
 \begin{subsection}{Leave a Dungeon}
 \textbf{Actor:} The Player. \\
 \textbf{Goal:} Leave a dungeon from some sort of menu option. \\
@@ -101,7 +145,7 @@
 	\item Be moved into a specified menu environment.
 \end{enumerate}
 \end{subsection}
-	
+
 \end{section}
 
 
@@ -110,43 +154,43 @@
 
 \begin{subsection}{Attacking}
 \textbf{Actor:} The Player
-\textbf{Goal:} Deal damage to an enemy or object and destroy it. 
-\textbf{Preconditions:} 
+\textbf{Goal:} Deal damage to an enemy or object and destroy it.
+\textbf{Preconditions:}
 \begin{enumerate}
-	\item The player is allowed and has the ability to attack. 
+	\item The player is allowed and has the ability to attack.
 	\item The player has a vaild weapon to attack with.
 	\item The player has enough ammunition or duribility to attack.
 \end{enumerate}
-\textbf{Summary:} The player attacks and entity, dealing some damage.  
+\textbf{Summary:} The player attacks and entity, dealing some damage.
 \textbf{Related Use-Cases:} Kill an Enemy, Reload Weapon
 \textbf{Steps:}
 \begin{enumerate}
 	\item The player uses the attack action.
-	\item A valid hitbox collision is checked for. 
+	\item A valid hitbox collision is checked for.
 	\item Ammunition and/or duribility are reduced.
-	\item Damage is calculated and applied to any hit entities. 
+	\item Damage is calculated and applied to any hit entities.
 	\item Visual elements are instantiated.
 \end{enumerate}
 \end{subsection}
 
 \begin{subsection}{Reloading Weapon}
 \textbf{Actor:} The Player
-\textbf{Goal:} Replenish weapon ammunition. 
-\textbf{Preconditions:} 
+\textbf{Goal:} Replenish weapon ammunition.
+\textbf{Preconditions:}
 \begin{enumerate}
-	\item The player is allowed and has the ability to reload. 
+	\item The player is allowed and has the ability to reload.
 	\item The player has a vaild weapon to reload with.
 	\item The player has enough ammunition to reload.
 \end{enumerate}
-\textbf{Summary:} The player decides to replenish their weapon(s) ammunition.  
+\textbf{Summary:} The player decides to replenish their weapon(s) ammunition.
 \textbf{Related Use-Cases:} Attack
 \textbf{Steps:}
 \begin{enumerate}
 	\item The player uses the reload action.
 	\item Inventory ammunition is reduced by the amount held in the weapon(s).
-	\item Weapons ammunition is replenished. 
+	\item Weapons ammunition is replenished.
 	\item Visual elements are instantiated.
-	\item Ignoring input for some time or other side effects are executed. 
+	\item Ignoring input for some time or other side effects are executed.
 \end{enumerate}
 \end{subsection}
 
