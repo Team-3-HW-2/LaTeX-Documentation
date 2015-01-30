@@ -70,33 +70,7 @@
 \textbf{Alternative:} The Player has not increased in level, and therefore has no points to increase stats with.
 \end{subsection}
 	
-\begin{subsection}{Enter a Dungeon}
-\textbf{Actor:} The Player. \\
-\textbf{Goal:} Enter a dungeon from some sort of menu option. \\
-\textbf{Precondition:} The player has access to the option to enter a dungeon and is not currently in a dungeon \\
-\textbf{Summary:} The player begins to play in a dungeon after a menu option \\
-\textbf{Related Use-Cases:} Leave a Dungeon \\
-\textbf{Steps:}
-\begin{enumerate}
-	\item Select an "Enter Dungeon" button.
-	\item Select a "Confirm" button.
-	\item Be moved into a dungeon environment.
-\end{enumerate}
-\end{subsection}
-	
-\begin{subsection}{Leave a Dungeon}
-\textbf{Actor:} The Player. \\
-\textbf{Goal:} Leave a dungeon from some sort of menu option. \\
-\textbf{Precondition:} The player has access to the option to leave a dungeon and is currently in a dungeon \\
-\textbf{Summary:} The player leaves a dungeon and is moved to some menu or lobby \\
-\textbf{Related Use-Cases:} Enter a Dungeon \\
-\textbf{Steps:}
-\begin{enumerate}
-	\item Request a "Leave this dungeon" menu through some button press.
-	\item Select a "Confirm" button.
-	\item Be moved into a specified menu environment.
-\end{enumerate}
-\end{subsection}
+
 
 \end{section}
 
