@@ -146,7 +146,27 @@
 	\item Inventory ammunition is reduced by the amount held in the weapon(s).
 	\item Weapons ammunition is replenished. 
 	\item Visual elements are instantiated.
-	\item Ignoring input for some time or other side effects are executed. 
+	\item Ignoring input for some time or other side effects are applied. 
+\end{enumerate}
+\end{subsection}
+
+\begin{subsection}{Take Damage}
+\textbf{Actor:} The Player, NPC, Enemy, Wall, Entity
+\textbf{Goal:} Reduce an entities health. 
+\textbf{Preconditions:} 
+\begin{enumerate}
+	\item The entity is damageable. 
+	\item The entity is not already destroyed.
+	\item The entity has collided with a damaging component.
+\end{enumerate}
+\textbf{Summary:} An entity has been damaged and health is reduced accordingly.  
+\textbf{Related Use-Cases:} Attack
+\textbf{Steps:}
+\begin{enumerate}
+	\item Calculate and apply damage received. 
+	\item Reduce armor duribility.
+	\item Apply side effects.
+	\item Visual elements are instantiated.
 \end{enumerate}
 \end{subsection}
 
