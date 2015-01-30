@@ -50,6 +50,54 @@
 
 
 \begin{section}{Ronnie Rodriguez}
+\begin{subsection}{Increase Stats}
+\textbf{Actor:} The Player. \\
+\textbf{Goal:} Recieve stat boosts after obtaining sufficient experience points. \\
+\textbf{Precondition:} The player has obtained sufficient experience points to increase in level, thus enabling a stat boost. \\
+\textbf{Summary:} The player chooses which stats they would like to apply a permanent boost to after increasing in level.  \\
+\textbf{Related Use-Cases:} Level Up \\
+\textbf{Steps:}
+\begin{enumerate}
+	\item Player is brought to stats menu page
+	\item Player has 5 points they can distribute among different stats like Def, Atk, Mag, etc.
+	\item Player navigates to stats using controller input and applies points accordingly
+	\item Player selects 'confirm' button in stats menu
+	\item "Confirm point allocation?" prompt displays along with yes and no options
+	\item If no is selected, prompt goes away and player can continue to allocate points as desired
+	\item If yes is selected, prompt closes and permanent stat boosts are initiated in accordance with point allocation.
+	\item Player can now close the menu and continue play.
+\end{enumerate}
+\textbf{Alternative:} The Player has not increased in level, and therefore has no points to increase stats with.
+\end{subsection}
+	
+\begin{subsection}{Enter a Dungeon}
+\textbf{Actor:} The Player. \\
+\textbf{Goal:} Enter a dungeon from some sort of menu option. \\
+\textbf{Precondition:} The player has access to the option to enter a dungeon and is not currently in a dungeon \\
+\textbf{Summary:} The player begins to play in a dungeon after a menu option \\
+\textbf{Related Use-Cases:} Leave a Dungeon \\
+\textbf{Steps:}
+\begin{enumerate}
+	\item Select an "Enter Dungeon" button.
+	\item Select a "Confirm" button.
+	\item Be moved into a dungeon environment.
+\end{enumerate}
+\end{subsection}
+	
+\begin{subsection}{Leave a Dungeon}
+\textbf{Actor:} The Player. \\
+\textbf{Goal:} Leave a dungeon from some sort of menu option. \\
+\textbf{Precondition:} The player has access to the option to leave a dungeon and is currently in a dungeon \\
+\textbf{Summary:} The player leaves a dungeon and is moved to some menu or lobby \\
+\textbf{Related Use-Cases:} Enter a Dungeon \\
+\textbf{Steps:}
+\begin{enumerate}
+	\item Request a "Leave this dungeon" menu through some button press.
+	\item Select a "Confirm" button.
+	\item Be moved into a specified menu environment.
+\end{enumerate}
+\end{subsection}
+
 \end{section}
 
 
