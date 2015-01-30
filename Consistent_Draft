@@ -107,6 +107,49 @@
 
 
 \begin{section}{Zachary Yama}
+
+\begin{subsection}{Attacking}
+\textbf{Actor:} The Player
+\textbf{Goal:} Deal damage to an enemy or object and destroy it. 
+\textbf{Preconditions:} 
+\begin{enumerate}
+	\item The player is allowed and has the ability to attack. 
+	\item The player has a vaild weapon to attack with.
+	\item The player has enough ammunition or duribility to attack.
+\end{enumerate}
+\textbf{Summary:} The player attacks and entity, dealing some damage.  
+\textbf{Related Use-Cases:} Kill an Enemy, Reload Weapon
+\textbf{Steps:}
+\begin{enumerate}
+	\item The player uses the attack action.
+	\item A valid hitbox collision is checked for. 
+	\item Ammunition and/or duribility are reduced.
+	\item Damage is calculated and applied to any hit entities. 
+	\item Visual elements are instantiated.
+\end{enumerate}
+\end{subsection}
+
+\begin{subsection}{Reloading Weapon}
+\textbf{Actor:} The Player
+\textbf{Goal:} Replenish weapon ammunition. 
+\textbf{Preconditions:} 
+\begin{enumerate}
+	\item The player is allowed and has the ability to reload. 
+	\item The player has a vaild weapon to reload with.
+	\item The player has enough ammunition to reload.
+\end{enumerate}
+\textbf{Summary:} The player decides to replenish their weapon(s) ammunition.  
+\textbf{Related Use-Cases:} Attack
+\textbf{Steps:}
+\begin{enumerate}
+	\item The player uses the reload action.
+	\item Inventory ammunition is reduced by the amount held in the weapon(s).
+	\item Weapons ammunition is replenished. 
+	\item Visual elements are instantiated.
+	\item Ignoring input for some time or other side effects are executed. 
+\end{enumerate}
+\end{subsection}
+
 \end{section}
 
 
