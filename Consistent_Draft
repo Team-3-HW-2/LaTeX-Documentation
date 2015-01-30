@@ -6,7 +6,7 @@
 \author{ Jordan Lynn \\
 \and Ronald Rodriguez \\
 \and Lance Wells \\
-\and
+\and Kurt Blasdell \\
 }
 
 \begin{document}
@@ -20,6 +20,48 @@
 
 
 \begin{section}{Kurt Blasdell}
+\begin{subsection}{Open and Close the Inventory}
+\textbf{Actor:} The Player. \\
+\textbf{Goal:} Open the inventory, or close the inventory when finished. \\
+\textbf{Summary:} The player opens up the inventory in order to view or use items, or the player closes the inventory when they are finished. \\
+\textbf{Related Use-Cases:} Select an item from inventory; Move and item in the inventory \\
+\textbf{Steps:}
+\begin{enumerate}
+	\item The player presses the ‘i’ key
+	\item An inventory window will open, allowing the player to do things with items in the inventory
+	\item Pressing the ‘i’ key again will close the inventory screen
+\end{enumerate}
+\textbf{Alternative:} The player may also click the Inventory window icon to open/close.
+\end{subsection}
+	
+\begin{subsection}{Reload Weapon}
+\textbf{Actor:} The Player. \\
+\textbf{Goal:} The player’s weapon will be reloaded with ammo \\
+\textbf{Precondition:} The player has a weapon equipped that takes some form of ammo. \\
+\textbf{Precondition:} The player has the correct type of ammo for the weapon. \\
+\textbf{Summary:} The player will fill their weapon with ammo that they may have. \\
+\textbf{Steps:}
+\begin{enumerate}
+	\item Press the reload button
+	\item Subtract the correct amount of ammo from the players ammo resources
+	\item Add the amount from step two to the ammo in the player’s weapon
+\end{enumerate}
+\end{subsection}
+	
+\begin{subsection}{Look at Stats}
+\textbf{Actor:} The Player. \\
+\textbf{Goal:} Open the stats screen and close when the player if finished. \\
+\textbf{Summary:} The player opens up the stats screen in order to view stats, or alter them, or the player closes the stats screen when they are finished. \\
+\textbf{Related Use-Cases:} Increase Stats \\
+\textbf{Steps:}
+\begin{enumerate}
+	\item The player presses the ‘c’ key
+	\item The stats window is opened displaying current stats and stat points
+	\item Pressing the ‘c’ key again will close the stats window
+\end{enumerate}
+\textbf{Alternative:} The player may also click the stats window icon to open/close.
+\end{subsection}
+
 \end{section}
 
 
