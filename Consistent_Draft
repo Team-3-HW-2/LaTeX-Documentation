@@ -7,6 +7,7 @@
 \and Ronald Rodriguez \\
 \and Lance Wells \\
 \and Kurt Blasdell \\
+\and Jared Zook \\
 }
 
 \begin{document}
@@ -308,6 +309,55 @@
 
 
 \begin{section}{Jared Zook}
+
+\begin{subsection}{Save the Game}
+\textbf{Actor:} A single player. \\
+\textbf{Goal:} Avoid starting the game over by saving progress. \\
+\textbf{Precondition:} The player is not engaged in battle. \\
+\textbf{Summary:} Save points are placed in specified locations found just prior to boss battles. They are represented as items. The player engages the save, chooses a name for their file, and saves the game.  \\
+\textbf{Related Use-Cases:} Pick Up Items, Use an Item \\
+\textbf{Steps:}
+\begin{enumerate}
+   \item Player picks up the save item.
+   \item System produces a "Save Game" menu.
+   \item Player selects a slot to save the game.
+   \item Player chooses a name for the saved location.
+   \item Player selects "Save" button.
+   \item System saves the player's location, stats, and inventory.
+   \item Player resumes normal gameplay.
+\end{enumerate}
+\textbf{Alternative:} The player exits the menu wthout saving.
+\end{subsection}
+
+\begin{subsection}{Load the Game}
+\textbf{Actor:} A single player. \\
+\textbf{Goal:} Retain the progress made from playing previously. \\
+\textbf{Precondition:} The player previously saved at least one game. \\
+\textbf{Summary:} The player can resume play at last saved location with inventory and stats intact.  \\
+\textbf{Related Use-Cases:} Save Game, Select Item from Inventory \\
+\textbf{Steps:}
+\begin{enumerate}
+   \item Player chooses "Load Game" menu from start menu.
+   \item System produces a "Load Game" menu.
+   \item Player selects the slot to load.
+   \item System restores previously saved game.
+   \item Player resumes normal gameplay.
+\end{enumerate}
+\textbf{Alternative:} The player begins a new game.
+\end{subsection}
+
+\begin{subsection}{Select an Item}
+\textbf{Actor:} A Single Player. \\
+\textbf{Goal:} To enable the ability for the player to use an item. \\
+\textbf{Precondition:} The player is not viewing any other menu. \\
+\textbf{Summary:} The player selects an item from inventory, such as a weapon, and is then free to equip it. \\
+\textbf{Related Use-Cases:} Equip an Item \\
+\textbf{Steps:}
+\begin{enumerate}
+   \item Player enters inventory.
+   \item Player scrolls down to desired item.
+   \item Player chooses "Select".
+\end{enumerate}
 \end{section}
 
 
