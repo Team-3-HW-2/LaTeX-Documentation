@@ -1,0 +1,117 @@
+\documentclass[12pt]{report}
+\usepackage{titling}
+
+\title{Homework 2, Team C}
+\author{ Jordan Lynn \\
+\and Ronald Rodriguez \\
+\and Lance Wells \\
+\and
+}
+
+\begin{document}
+    \maketitle
+    
+\tableofcontents{}
+
+\chapter{PlantUML Diagrams}
+
+\chapter{Use-Case Specifications}
+
+
+\begin{section}{Kurt Blasdell}
+\end{section}
+
+
+
+\begin{section}{Elizabeth Hernandez}
+\end{section}
+
+
+
+\begin{section}{Morgan Holbart}
+\end{section}
+
+
+
+\begin{section}{Jordan Lynn}
+\end{section}
+
+
+
+\begin{section}{Brett Menzies}
+\end{section}
+
+
+
+\begin{section}{Michael Mueller}
+\end{section}
+
+
+
+\begin{section}{Ronnie Rodriguez}
+\end{section}
+
+
+
+\begin{section}{Lance Wells}
+
+\begin{subsection}{Buy an Item}
+\textbf{Actor:} The Player. \\
+\textbf{Goal:} Purchase an item and have it placed in the inventory. \\
+\textbf{Precondition:} The player has access to a merchant that is able to sell items \\
+\textbf{Summary:} The player loses some currency in exchange for an item placed in their inventory \\
+\textbf{Related Use-Cases:} Sell an item; Dialog \\
+\textbf{Steps:}
+\begin{enumerate}
+	\item Be close enough to the merchant to be able to communicate.
+	\item Begin dialog with the merchant.
+	\item Select a "buy" option.
+	\item Indicate a desired item from the display.
+	\item Merchant detracts the specified amount of money from the player.
+	\item Receive an item in inventory.
+\end{enumerate}
+\textbf{Alternative:} The Player does not have enough money and receives a message indicating such.
+\end{subsection}
+	
+\begin{subsection}{Enter a Dungeon}
+\textbf{Actor:} The Player. \\
+\textbf{Goal:} Enter a dungeon from some sort of menu option. \\
+\textbf{Precondition:} The player has access to the option to enter a dungeon and is not currently in a dungeon \\
+\textbf{Summary:} The player begins to play in a dungeon after a menu option \\
+\textbf{Related Use-Cases:} Leave a Dungeon \\
+\textbf{Steps:}
+\begin{enumerate}
+	\item Select an "Enter Dungeon" button.
+	\item Select a "Confirm" button.
+	\item Be moved into a dungeon environment.
+\end{enumerate}
+\end{subsection}
+	
+\begin{subsection}{Leave a Dungeon}
+\textbf{Actor:} The Player. \\
+\textbf{Goal:} Leave a dungeon from some sort of menu option. \\
+\textbf{Precondition:} The player has access to the option to leave a dungeon and is currently in a dungeon \\
+\textbf{Summary:} The player leaves a dungeon and is moved to some menu or lobby \\
+\textbf{Related Use-Cases:} Enter a Dungeon \\
+\textbf{Steps:}
+\begin{enumerate}
+	\item Request a "Leave this dungeon" menu through some button press.
+	\item Select a "Confirm" button.
+	\item Be moved into a specified menu environment.
+\end{enumerate}
+\end{subsection}
+	
+\end{section}
+
+
+
+\begin{section}{Zachary Yama}
+\end{section}
+
+
+
+\begin{section}{Jared Zook}
+\end{section}
+
+
+\end{document}
