@@ -1,3 +1,3 @@
 all:
-	latexpdf Consistent_Draft.tex 
+	pdflatex Consistent_Draft.tex 
 
