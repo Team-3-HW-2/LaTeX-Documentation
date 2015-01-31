@@ -385,7 +385,7 @@
 
 
 
-\begin{section}{Jared Zook}
+\section{Jared Zook}
 
 \begin{subsection}{Save the Game}
 \textbf{Actor:} A single player. \\
@@ -396,14 +396,12 @@
 \textbf{Steps:}
 \begin{enumerate}
    \item Player picks up the save item.
-   \item System produces a "Save Game" menu.
-   \item Player selects a slot to save the game.
-   \item Player chooses a name for the saved location.
+   \item Player selects a slot to save the game from menu.
+   \item Player enters a name for the saved location.
    \item Player selects "Save" button.
-   \item System saves the player's location, stats, and inventory.
-   \item Player resumes normal gameplay.
 \end{enumerate}
-\textbf{Alternative:} The player exits the menu wthout saving.
+\textbf{Alternatives:} The player exits the menu wthout saving.
+\textbf{Postcondition:} Player returns to normal gameplay. Player's location, stats, and inventory are saved for later use.
 \end{subsection}
 
 \begin{subsection}{Load the Game}
@@ -414,13 +412,11 @@
 \textbf{Related Use-Cases:} Save Game, Select Item from Inventory \\
 \textbf{Steps:}
 \begin{enumerate}
-   \item Player chooses "Load Game" menu from start menu.
-   \item System produces a "Load Game" menu.
+   \item Player selects "Load Game" menu from start menu.
    \item Player selects the slot to load.
-   \item System restores previously saved game.
-   \item Player resumes normal gameplay.
 \end{enumerate}
 \textbf{Alternative:} The player begins a new game.
+\textbf{Postcondition:} The player's chosen previous location, stats, and inventory are restored.
 \end{subsection}
 
 \begin{subsection}{Select an Item}
@@ -436,7 +432,5 @@
    \item Player chooses "Select".
 \end{enumerate}
 \end{subsection}
-
-\end{section}
 
 \end{document}
