@@ -71,6 +71,75 @@
 
 
 \begin{section}{Elizabeth Hernandez}
+\begin{subsection}{Move Avatar}
+\textbf{Actor:} The Player \\
+\textbf{Goal:} Change the position of the player's avatar \\
+\textbf{Preconditions:} 
+\begin{enumerate}
+	\item The player is not viewing a selection screen
+	\item The player's character is not suffering from an effect that prohibits movement
+\end{enumerate}
+\textbf{Summary:} The player directs their avatar to move into an adjacent space. \\
+\textbf{Related Use-Cases:} Collect an Item, View the Map, Attacking an Enemy, Sustaining Damage, Dialogue, Buy an Item, Sell Items \\
+\textbf{Steps:}
+\begin{enumerate}
+	\item The player moves their avatar into a space containing an item
+	\item The player presses the selection key
+	\item The item is removed from its space
+	\item The item is added to the player's inventory
+\end{enumerate}
+\textbf{Alternatives:} 
+\begin{enumerate}
+	\item Step 1: The player faces their avatar at an adjacent space containing an item
+	\item Step 4: The item is used immediately
+\end{enumerate}
+\end{subsection}
+
+\begin{subsection}{Collect an Item}
+\textbf{Actor:} The Player \\
+\textbf{Goal:} Collect an item for use by player \\
+\textbf{Preconditions:} \begin{enumerate}
+	\item Avatar movement is allowed for the player
+\end{enumerate}
+\textbf{Summary:} The player collects an item from the immediate area. \\
+\textbf{Related Use-Cases:} Move Avatar \\
+\textbf{Steps:}
+\begin{enumerate}
+	\item The player moves their avatar into a space containing an item
+	\item The player presses the selection key
+	\item The item is removed from its space
+	\item The item is added to the player's inventory
+\end{enumerate}
+\textbf{Alternatives:} 
+\begin{enumerate}
+	\item Step 1: The player faces their avatar at an adjacent space containing an item
+	\item Step 4: The item is used immediately
+\end{enumerate}
+\end{subsection}
+
+\begin{subsection}{View the Map}
+\textbf{Actor:} The Player \\
+\textbf{Goal:} Display where known objects are in relation to the player's avatar \\
+\textbf{Preconditions:} 
+\begin{enumerate}
+	\item Avatar movement is allowed for the player
+\end{enumerate}
+\textbf{Summary:} The player views a large-scale map of their current area. \\
+\textbf{Related Use-Cases:} Move Avatar, Enter a Dungeon, Leave a Dungeon \\
+\textbf{Steps:}
+\begin{enumerate}
+	\item The player presses the map key
+	\item The player's standard view of the area is replaced by a map of the area
+	\item The player moves their avatar
+	\item The player presses either the escape key or map key
+	\item The player's view of the area is returned to its standard formatr
+\end{enumerate}
+\textbf{Alternatives:} 
+\begin{enumerate}
+	\item Step 3: The player chooses to enter or leave a dungeon
+	\item Step 3: The player proceeds directly to Step 4
+\end{enumerate}
+\end{subsection}
 \end{section}
 
 
