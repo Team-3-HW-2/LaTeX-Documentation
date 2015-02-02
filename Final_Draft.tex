@@ -433,10 +433,9 @@
 \textbf{Actors:} The Player \\
 \textbf{Goal:} Select a menu option to begin either single-player or multi-player mode. \\
 \textbf{Precondition:} The player must be at a menu with the option to begin playing. \\
-\textbf{Summary:} The player picks the 'multi-player' option from a menu and is sent to host a session. \\
+\textbf{Summary:} The player picks the 'multi-player' option from a menu and is sent to host a session or join a section. Multiplayer will work through a system where each player is playing in real time with eachother. Situations like attacking will be pseudo-turn based by having a cool down on each attack. This will allow our system to seem turn based when really it is real time.
 \textbf{Steps:}
 \begin{enumerate}
-	\item The player selects either 'single-player' or 'multi-player' at the main menu.
 	\item The player selects 'multi-player'.
 	\item The player is then directed into a menu which prompts the user to either host or join a session.
 	\item The player picks 'host'.
@@ -447,7 +446,7 @@
 	\item (Step 1): The player picks 'single-player' and is sent into the game without the option for other players to join.
 	\item (Step 4): The player picks 'join' and is sent to a menu which prompts the user for an ip address which then connects them with a host.
 \end{enumerate}
-\end{subsection}
+\end{clearsubsection}
 
 \begin{subsection}{Complete a task/quest}
 \textbf{Actors:} The Player, Friendly NPC \\
@@ -459,8 +458,8 @@
 	\item The player opens a 'quest log'.
 	\item The player indicates which quest that they would like to attempt to complete via some button press.
 	\item The player indicates that they would like to complete that quest via some button press.
-	\item The player completes a quest and all according rewards are deposited into their respective inventories.
-	\item The quest is now indicated as being complete.
+	\item The player completes a quest and all according rewards are split into  respective inventories.
+	\item The quest is now indicated as being complete for the hosting player.
 \end{enumerate}
 \textbf{Alternative:} The player does not have all objectives complete and cannot choose to complete the quest.
 \end{subsection}
