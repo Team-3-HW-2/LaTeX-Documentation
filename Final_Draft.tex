@@ -635,4 +635,59 @@
 \end{enumerate}
 \end{subsection}
 
+
+\section{Morgan Holbart}
+\begin{subsection}{Enter the Game}
+\textbf{Actor:} A Player. \\
+\textbf{Goal:} Start the game from the menu \\
+\textbf{Preconditions:}
+\begin{enumerate}
+	\item The player is currently in the starting menu
+\end{enumerate}
+\textbf{Summary:} The player attempts to start the game \\
+\textbf{Related Use-Cases:} Load Game \\
+\textbf{Steps:}
+\begin{enumerate}
+	\item The player selects the start button
+	\item The player presses the input to activate the start button
+\end{enumerate}
+\end{subsection}
+\begin{subsection}{Open Doors w/ Regard to Keys}
+\textbf{Actor:} A Player. \\
+\textbf{Goal:} Open a door adjacent to the player \\
+\textbf{Preconditions:}
+\begin{enumerate}
+	\item The player is standing adjacent to the door
+	\item The player has any key required to open the door
+	\item The player is not currently in combat
+\end{enumerate}
+\textbf{Summary:} The player stands next to a door, faces it, presses the use action, and the door opens if he holds the key \\
+\textbf{Related Use-Cases:} Move Through an Area, Interact, Move Avatar \\
+\textbf{Steps:}
+\begin{enumerate}
+	\item The player moves adjacent to a door
+	\item The player faces the door
+	\item The player interacts with the door
+\end{enumerate}
+\end{subsection}
+\begin{subsection}{Craft Item}
+\textbf{Actor:} A Player. \\
+\textbf{Goal:} Craft an item. \\
+\textbf{Preconditions:}
+\begin{enumerate}
+	\item The player has selected X components to craft together from the crafting menu
+	\item The player has the selected components in his inventory
+	\item The components selected to craft together will compile into a valid recipe
+	\item The player has an inventory slot available to put the crafted item in
+\end{enumerate}
+\textbf{Summary:} The player selects components to craft, if he has the components and an inventory space, and it makes a valid recipe, it will craft the item. \\
+\textbf{Related Use-Cases:} Open Crafting Screen \\
+\textbf{Steps:}
+\begin{enumerate}
+	\item The player opens the crafting screen
+	\item The player selects a number of components
+	\item The player presses the craft button
+\end{enumerate}
+\end{subsection}
+
 \end{document}
