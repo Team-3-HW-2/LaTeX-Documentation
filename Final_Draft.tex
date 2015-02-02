@@ -1,17 +1,21 @@
 \documentclass[12pt]{report}
 \usepackage{titling}
+\usepackage{graphicx}
+\usepackage[export]{adjustbox}
 
-%Shamelessly "adapted" from the other LaTeX documentation in U-C List repository
 \title{Homework 2, Team C}
-\author{ Jordan Lynn 
+\author{ Kurt Blasdell 
+\and Elizabeth Hernandez 
+\and Jordan Lynn 
+\and Brett Menzies 
+\and Michael Mueller 
 \and Ronald Rodriguez 
 \and Lance Wells 
-\and Brett Menzies 
-\and Kurt Blasdell 
+\and Zachary Yama 
 \and Jared Zook 
-\and Zachary Yama
-\and Elizabeth Hernandez
+\and Morgan Holbart
 }
+
 
 \begin{document}
     \maketitle
@@ -19,11 +23,22 @@
 \tableofcontents{}
 
 \chapter{PlantUML Diagrams}
+\begin{figure}
+	\includegraphics[scale=0.25,left]{uml-Jared_Zook.png}
+	\caption{UML diagram - Jared Zook}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.4,center]{uml-Lance_Wells.png}
+	\caption{UML diagram - Lance Wells}
+\end{figure}
+
 
 \chapter{Use-Case Specifications}
 
 
-\begin{section}{Kurt Blasdell}
+\section{Kurt Blasdell}
 \begin{subsection}{Open and Close the Inventory}
 \textbf{Actor:} The Player. \\
 \textbf{Goal:} Open the inventory, or close the inventory when finished. \\
@@ -66,11 +81,11 @@
 \textbf{Alternative:} The player may also click the stats window icon to open/close.
 \end{subsection}
 
-\end{section}
 
 
 
-\begin{section}{Elizabeth Hernandez}
+
+\section{Elizabeth Hernandez}
 \begin{subsection}{Move Avatar}
 \textbf{Actor:} The Player \\
 \textbf{Goal:} Change the position of the player's avatar \\
@@ -140,12 +155,7 @@
 	\item Step 3: The player proceeds directly to Step 4
 \end{enumerate}
 \end{subsection}
-\end{section}
 
-
-
-\begin{section}{Morgan Holbart}
-\end{section}
 
 
 
@@ -204,7 +214,10 @@
 
 
 
-\begin{section}{Brett Menzies}
+
+
+
+\section{Brett Menzies}
 
 \begin{subsection}{Equip an Item}
 \textbf{Actors:} Player \\
@@ -248,11 +261,11 @@
 
 \end{subsection}
 
-\end{section}
 
 
 
-\begin{section}{Michael Mueller}
+
+\section{Michael Mueller}
 \begin{subsection}{Killing an Enemy}
 \textbf{Actors:} Player,Enemy \\
 \textbf{Goal:} Remove an eliminated enemy \\
@@ -288,11 +301,11 @@
 	\item Player choices what to do
 \end{enumerate}
 \end{subsection}
-\end{section}
 
 
 
-\begin{section}{Ronnie Rodriguez}
+
+\section{Ronnie Rodriguez}
 \begin{subsection}{Increase Stats}
 \textbf{Actor:} The Player. \\
 \textbf{Goal:} Recieve stat boosts after obtaining sufficient experience points. \\
@@ -306,7 +319,7 @@
 	\item Player has 5 points they can distribute among different stats like Def, Atk, Mag, etc.
 	\item Player navigates to stats using controller input and applies points accordingly.
 	\item Player selects 'confirm' button in stats menu.
-	\item "Confirm point allocation?" prompt displays along with yes and no options.
+	\item ''Confirm point allocation?" prompt displays along with yes and no options.
 	\item If no is selected, prompt goes away and player can continue to allocate points as desired.
 	\item If yes is selected, prompt closes and permanent stat boosts are initiated in accordance with point allocation.
 \end{enumerate}
@@ -323,7 +336,7 @@
 \begin{enumerate}
 	\item Player has not yet obtained the amount of experience points required to level up.
 	\item Player kills enemy or completes quest that puts them at the required amount of experience points to level up.
-	\item "Level Up!" prompt displays with accompanying victory sound. Gameplay is not interrupted.
+	\item ''Level Up!" prompt displays with accompanying victory sound. Gameplay is not interrupted.
 	\item Player initiates 'Increase Stats' procedure (see above).
 \end{enumerate}
 \textbf{Alternative:} The player has not obtained enough experience points to increase in level.
@@ -349,11 +362,11 @@
 \end{enumerate}
 \textbf{Alternative:} The Player has no items, and therefore nothing to rearrange.
 \end{subsection}
-\end{section}
 
 
 
-\begin{section}{Lance Wells}
+
+\section{Lance Wells}
 
 \begin{subsection}{Buy an Item}
 \textbf{Actor:} The Player. \\
@@ -365,7 +378,7 @@
 \begin{enumerate}
 	\item Be close enough to the merchant to be able to communicate.
 	\item Begin dialog with the merchant.
-	\item Select a "buy" option.
+	\item Select a ''buy" option.
 	\item Indicate a desired item from the display.
 	\item Merchant detracts the specified amount of money from the player.
 	\item Receive an item in inventory.
@@ -381,8 +394,8 @@
 \textbf{Related Use-Cases:} Leave a Dungeon \\
 \textbf{Steps:}
 \begin{enumerate}
-	\item Select an "Enter Dungeon" button.
-	\item Select a "Confirm" button.
+	\item Select an ''Enter Dungeon" button.
+	\item Select a ''Confirm" button.
 	\item Be moved into a dungeon environment.
 \end{enumerate}
 \end{subsection}
@@ -395,8 +408,8 @@
 \textbf{Related Use-Cases:} Enter a Dungeon \\
 \textbf{Steps:}
 \begin{enumerate}
-	\item Request a "Leave this dungeon" menu through some button press.
-	\item Select a "Confirm" button.
+	\item Request a ''Leave this dungeon" menu through some button press.
+	\item Select a ''Confirm" button.
 	\item Be moved into a specified menu environment.
 \end{enumerate}
 \end{subsection}
@@ -410,17 +423,104 @@
 \textbf{Steps:}
 \begin{enumerate}
 	\item The player indicates a request to communicate with a nearby NPC via a button press.
-	\item A box with "greeting" dialog is displayed.
+	\item A box with ''greeting" dialog is displayed.
 	\item The player must then press buttons with according textual decisions to communicate.
-	\item The player closes the conversation with a "Goodbye" textual decision button.
+	\item The player closes the conversation with a ''Goodbye" textual decision button.
 \end{enumerate}
 \end{subsection}
 
-\end{section}
+\begin{subsection}{Multiplayer Selection}
+\textbf{Actors:} The Player \\
+\textbf{Goal:} Select a menu option to begin either single-player or multi-player mode. \\
+\textbf{Precondition:} The player must be at a menu with the option to begin playing. \\
+\textbf{Summary:} The player picks the 'multi-player' option from a menu and is sent to host a session. \\
+\textbf{Steps:}
+\begin{enumerate}
+	\item The player selects either 'single-player' or 'multi-player' at the main menu.
+	\item The player selects 'multi-player'.
+	\item The player is then directed into a menu which prompts the user to either host or join a session.
+	\item The player picks 'host'.
+	\item The player is then sent into a game with the option for users to join at-will.
+\end{enumerate}
+\textbf{Alternative:}
+\begin{enumerate}
+	\item (Step 1): The player picks 'single-player' and is sent into the game without the option for other players to join.
+	\item (Step 4): The player picks 'join' and is sent to a menu which prompts the user for an ip address which then connects them with a host.
+\end{enumerate}
+\end{subsection}
+
+\begin{subsection}{Complete a task/quest}
+\textbf{Actors:} The Player, Friendly NPC \\
+\textbf{Goal:} The player successfully completes a quest \\
+\textbf{Precondition:} The player must have completed all tasks for a quest. \\
+\textbf{Summary:} The player opens a quest log and completes a quest through a series of button presses. \\
+\textbf{Steps:}
+\begin{enumerate}
+	\item The player opens a 'quest log'.
+	\item The player indicates which quest that they would like to attempt to complete via some button press.
+	\item The player indicates that they would like to complete that quest via some button press.
+	\item The player completes a quest and all according rewards are deposited into their respective inventories.
+	\item The quest is now indicated as being complete.
+\end{enumerate}
+\textbf{Alternative:} The player does not have all objectives complete and cannot choose to complete the quest.
+\end{subsection}
+
+\begin{subsection}{Start the game}
+\textbf{Actors:} The Player \\
+\textbf{Goal:} The player successfully starts the game. \\
+\textbf{Precondition:} The player must not have the game already started. \\
+\textbf{Summary:} The player starts the game through the java virtual machine and is directed to a main menu. \\
+\textbf{Steps:}
+\begin{enumerate}
+	\item The player chooses to run the game through the java virtual machine.
+	\item The game begins, transitioning to a main menu.
+\end{enumerate}
+\end{subsection}
+
+\begin{subsection}{Open doors}
+\textbf{Actors:} The Player \\
+\textbf{Goal:} The player successfully opens a door. \\
+\textbf{Precondition:} The player must be within operable range of a door. \\
+\textbf{Summary:} The player opens a door after checking for keys and codes. \\
+\textbf{Steps:}
+\begin{enumerate}
+	\item The player indicates that they would like to open a door through some button press.
+	\item The door is then checked to see if it requires any sort of keys/codes or if it is locked.
+	\item If the door is locked, the player is then prompted for a key or a code.
+	\item If the door requires a key, an appropriate key is then removed from the player's inventory.
+	\item The door is unlocked.
+	\item The door is opened.
+\end{enumerate}
+\textbf{Alternative:}
+\begin{enumerate}
+	\item (Step 3): If the door requires no key, or is not locked, the door opens without further prompts.
+	\item (Step 4): If the door requires no key, but requires a code, the player is then prompted for a code which is entered via a keypad.
+	\item (Step 5): If the player does not have the appropriate key, the player is then informed as such and the door remains locked.
+\end{enumerate}
+\end{subsection}
+
+\begin{subsection}{Change Current Weapon}
+\textbf{Actors:} The Player \\
+\textbf{Goal:} The player successfully changes their currently equipped weapon. \\
+\textbf{Precondition:} The player must have two or more weapons ready to change. \\
+\textbf{Summary:} -------------------------------- \\
+\textbf{Steps:}
+\begin{enumerate}
+	\item The player indicates that they would like to change weapons through some button press (e.g. 1,2,3,etc.)
+	\item The system then checks if the player has a weapon in the desired slot (e.g. 1,2,3,etc.)
+	\item If the player has a weapon in that selected slot, the player's active weapon is then changed to that weapon, leaving the old weapon in-tact.
+\end{enumerate}
+\textbf{Alternative:}
+\begin{enumerate}
+	\item (Step 3): If the player does not have an equipped weapon in that slot, the player then switches to an empty hand.
+\end{enumerate}
+\end{subsection}
 
 
 
-\begin{section}{Zachary Yama}
+
+
+\section{Zachary Yama}
 
 \begin{subsection}{Attacking}
 \textbf{Actor:} The Player
@@ -484,7 +584,7 @@
 \end{enumerate}
 \end{subsection}
 
-\end{section}
+
 
 
 
@@ -501,7 +601,7 @@
    \item Player picks up the save item.
    \item Player selects a slot to save the game from menu.
    \item Player enters a name for the saved location.
-   \item Player selects "Save" button.
+   \item Player selects ''Save" button.
 \end{enumerate}
 \textbf{Alternatives:} The player exits the menu wthout saving.
 \textbf{Postcondition:} Player returns to normal gameplay. Player's location, stats, and inventory are saved for later use.
@@ -515,7 +615,7 @@
 \textbf{Related Use-Cases:} Save Game, Select Item from Inventory \\
 \textbf{Steps:}
 \begin{enumerate}
-   \item Player selects "Load Game" menu from start menu.
+   \item Player selects ''Load Game" menu from start menu.
    \item Player selects the slot to load.
 \end{enumerate}
 \textbf{Alternative:} The player begins a new game.
@@ -532,7 +632,7 @@
 \begin{enumerate}
    \item Player enters inventory.
    \item Player scrolls down to desired item.
-   \item Player chooses "Select".
+   \item Player chooses ''Select".
 \end{enumerate}
 \end{subsection}
 
